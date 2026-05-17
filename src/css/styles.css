@@ -68,6 +68,15 @@ h2 {
     max-width: 100%;
 }
  
+.about-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .avatar {
     width: 9.5rem; 
     height: 9.5rem; 
@@ -103,7 +112,7 @@ h2 {
 }
  
  
-/* ✅ @media fechado corretamente aqui */
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -119,9 +128,9 @@ h2 {
     }
 }
  
-/* Contato — fora do @media, aplicado em todas as telas */
+
 #contact {
-    background-color: #b58396;
+    background: linear-gradient(135deg, #ffffff 0%, #640357 100%);
     padding: 4rem 5%;
     border-radius: 1rem;
 }
@@ -129,10 +138,11 @@ h2 {
 .contact-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
+    gap: 1rem; 
+    max-width: 35rem; 
+    margin: 2rem auto;
 }
+
  
 .custom-contact-card {
     background-color: #1a0f12; 
