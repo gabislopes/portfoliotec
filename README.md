@@ -1,5 +1,5 @@
 Este é o meu primeiro portfólio profissional, desenvolvido como atividade prática para a disciplina de projeto de programação 
-com o objetivo de consolidar meus conhecimentos em HTML5 e CSS3.
+com o objetivo de consolidar meus conhecimentos em HTML e CSS.
 
 📂 Estrutura de Seções
 O portfólio contém todas as seções obrigatórias exigidas
