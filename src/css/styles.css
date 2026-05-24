@@ -1,38 +1,43 @@
- *{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- 
+
 :root {
     --primary: #000000;
     --dark: #000610;
-    --light: #9f79a3;
+    --light: #a57eb5; 
     --text: #00060e;
+    --accent: #ff007f; 
+    --gradient: linear-gradient(135deg, #ffffff 0%, #640357 100%);
+    --bg-purple: #ae70a7; /* Roxo padrão do seu body */
+    --bg-about: #ae70a7;  /* Roxo ajustado para a seção sobre mim */
 }
- 
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background-color: var(--light);
+    background-color: var(--bg-purple);
 }
- 
- 
+
+/* --- NAVEGAÇÃO --- */
 header {
     background: #f4eff5;
-    box-shadow: 0 2px 10px rgba(214, 196, 196, 0.1);
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
 }
- 
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
 }
 
@@ -41,40 +46,30 @@ nav ul {
     list-style: none;
     gap: 1.5rem;
 }
- 
+
 nav a {
     text-decoration: none;
     color: var(--dark);
     font-weight: 600;
 }
- 
 
+/* --- AJUSTES DE SEÇÃO --- */
 section {
     padding: 4rem 5%;
-    max-width: 1000px;
-    margin: 0 auto;
+    width: 100%;
 }
- 
+
 h2 {
     margin-bottom: 2rem;
     text-align: center;
     color: var(--primary);
 }
- 
-/* Apresentação */
+
+/* --- APRESENTAÇÃO (HERO) --- */
 .hero {
     text-align: center;
-    background: linear-gradient(135deg, #ffffff 0%, #640357 100%);
-    max-width: 100%;
-}
- 
-.about-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    max-width: 700px;
-    margin: 0 auto;
+    background: var(--gradient);
+    padding: 5rem 5% 4rem 5%;
 }
 
 .avatar {
@@ -82,127 +77,150 @@ h2 {
     height: 9.5rem; 
     border-radius: 50%;
     margin-bottom: 1.5rem;
-    border: 4px solid rgb(0, 0, 0);
+    border: 0.25rem solid var(--primary);
     object-fit: cover;
     object-position: center;
 }
- 
-/* Habilidades */
+
+/* --- SEÇÃO SOBRE MIM (CORRIGIDA) --- */
+#about {
+    background-color: var(--bg-about); /* Fundo roxo da seção [1] */
+}
+
+.about-container {
+    background-color: #ffffff;    /* Fundo branco do quadro [1] */
+    color: #000000;               /* Texto preto para leitura [1] */
+    padding: 2.5rem;              /* Espaçamento interno */
+    border-radius: 1rem;          /* Bordas arredondadas [1] */
+    max-width: 45rem;             /* Largura centralizada */
+    margin: 0 auto;               /* Centraliza o card na tela */
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2); /* Sombra de profundidade */
+    text-align: center;           /* Texto centralizado conforme a imagem */
+}
+
+/* --- PROJETOS E BLOCOS BRANCOS --- */
+.white-block, .project-card {
+    background-color: #ffffff;
+    color: var(--text);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+    border-left: 0.4rem solid var(--primary);
+    max-width: 50rem;
+    margin: 0 auto 2rem auto;
+    text-align: left;
+}
+
+/* --- HABILIDADES --- */
+#skills {
+    background-color: var(--bg-purple);
+}
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1.2rem;
+    max-width: 60rem;
+    margin: 0 auto;
 }
- 
-.skill-card {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
- 
-/* Projetos  */
-.project-card {
-    background: white;
-    padding: 2rem;
-    border-left: 5px solid var(--primary);
-    border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
- 
- 
 
+.skill-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
+    border: 1px solid #f078e6;
+}
+
+/* --- CONTATO --- */
+#contact {
+    background: var(--gradient);
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 32rem; 
+    margin: 0 auto;
+}
+
+.custom-contact-card {
+    background-color: #1a0f12; 
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.custom-contact-card:hover {
+    transform: scale(1.03);
+}
+
+.icon-box {
+    width: 3rem;
+    height: 3rem;
+    background-color: #2d161d;
+    border: 2px solid var(--accent);
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.2rem;
+    flex-shrink: 0;
+}
+
+.icon-box i {
+    color: var(--accent);
+    font-size: 1.3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.label {
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.detail {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.arrow {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         gap: 1rem;
     }
     
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    
     section {
-        padding: 2rem 5%;
+        padding: 3rem 5%;
     }
-}
- 
 
-#contact {
-    background: linear-gradient(135deg, #ffffff 0%, #640357 100%);
-    padding: 4rem 5%;
-    border-radius: 1rem;
-}
- 
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; 
-    max-width: 35rem; 
-    margin: 2rem auto;
-}
-
- 
-.custom-contact-card {
-    background-color: #1a0f12; 
-    display: flex;
-    align-items: center;
-    padding: 1.5rem;
-    border-radius: 1.2rem;
-    text-decoration: none;
-    transition: transform 0.2s;
-}
- 
-.custom-contact-card:hover {
-    transform: scale(1.02);
-}
- 
-.icon-box {
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: #2d161d;
-    border: 2px solid #ff007f;
-    border-radius: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1.5rem;
-}
- 
-.icon-box i {
-    color: #ff007f;
-    font-size: 1.5rem;
-}
- 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
- 
-.label {
-    color: #ff007f;
-    font-size: 0.75rem;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    margin-bottom: 0.3rem;
-}
- 
-.detail {
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
- 
-.arrow {
-    color: white;
-    font-size: 1.2rem;
-}
- 
-/* Ajuste para telas menores */
-@media (max-width: 600px) {
     .detail {
-        font-size: 0.9rem; 
+        font-size: 0.85rem;
+    }
+
+    .about-container {
+        padding: 1.5rem;
     }
 }
